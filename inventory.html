@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Secure Aadya Engineering Equipment stock inward and outward portal.">
+  <title>Stock Portal | Aadya Engineering Equipment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="inventory-portal.css?v=9">
+  <script src="inventory-portal.js?v=9" defer></script>
+</head>
+<body>
+  <header class="portal-header">
+    <div class="portal-brand"><img src="assets/aadya-logo.webp" alt=""><span><b>AADYA</b><small>ENGINEERING EQUIPMENT</small></span></div>
+  </header>
+  <main class="portal-main">
+    <section class="portal-login" id="portal-login">
+      <img class="portal-login-logo" src="assets/aadya-logo.webp" alt="Aadya Engineering Equipment">
+      <span class="portal-eyebrow">SECURE TEAM ACCESS</span>
+      <h1>Inventory sign in</h1>
+      <p class="portal-intro">Sign in with your backoffice Admin or Managing Director account to manage stock.</p>
+      <form id="portal-login-form">
+        <label for="portal-identity">Username or email</label>
+        <input id="portal-identity" autocomplete="username" required>
+        <label for="portal-password">Password</label>
+        <input id="portal-password" type="password" autocomplete="current-password" required>
+        <p class="portal-error" id="portal-login-error" role="alert"></p>
+        <button class="portal-primary" type="submit">Continue securely <span>→</span></button>
+      </form>
+      <form id="portal-otp-form" hidden>
+        <p>A one-time code was sent to <b id="portal-otp-email"></b>.</p>
+        <label for="portal-otp">Six-digit code</label>
+        <input id="portal-otp" inputmode="numeric" autocomplete="one-time-code" pattern="[0-9]{6}" minlength="6" maxlength="6" required>
+        <p class="portal-error" id="portal-otp-error" role="alert"></p>
+        <button class="portal-primary" type="submit">Verify &amp; open inventory</button>
+        <button class="portal-link-button" id="portal-resend-otp" type="button">Send a new code</button>
+      </form>
+      <small class="portal-login-note">No separate inventory registration. Backoffice Admin accounts only.</small>
+    </section>
+    <section class="portal-dashboard" id="portal-dashboard" hidden>
+      <aside class="portal-sidebar">
+        <div class="portal-sidebar-brand">
+          <img src="assets/aadya-logo.webp" alt="Aadya Engineering Equipment">
+          <div><span>INVENTORY</span><strong>Control Center</strong></div>
+        </div>
+        <nav class="portal-sidebar-nav" aria-label="Inventory navigation">
+          <button class="portal-nav-link active" type="button" data-portal-view-target="overview">Overview</button>
+          <button class="portal-nav-link" type="button" data-portal-view-target="search">Search stock</button>
+          <button class="portal-nav-link" type="button" data-portal-view-target="stock-items">Stock items</button>
+          <button class="portal-nav-link" type="button" data-portal-view-target="movement">Stock movement</button>
+          <button class="portal-nav-link" type="button" data-portal-view-target="reports">Reports</button>
+        </nav>
+        <div class="portal-sidebar-user">
+          <span id="portal-user-name"></span>
+          <button class="portal-secondary" id="portal-logout" type="button">Sign out</button>
+        </div>
+      </aside>
+      <div class="portal-dashboard-content">
+      <div class="portal-page-heading" id="portal-overview" data-portal-view="overview">
+        <div><span class="portal-eyebrow">INVENTORY CONTROL CENTER</span><h1>Stock dashboard</h1><p>Search parts and record stock inward and outward movements.</p></div>
+      </div>
+      <div class="portal-overview-search" data-portal-view="overview">
+        <label for="portal-dashboard-search">Search all stock</label>
+        <div class="portal-search-box">
+          <span aria-hidden="true">⌕</span>
+          <input id="portal-dashboard-search" type="search" placeholder="Search part number, description or category">
+        </div>
+      </div>
+      <div class="portal-date-filter" data-portal-view="overview">
+        <label>From date<input id="portal-from" type="date"></label>
+        <label>To date<input id="portal-to" type="date"></label>
+        <button class="portal-primary portal-compact" id="portal-refresh" type="button">Apply dates</button>
+      </div>
+      <div class="portal-metrics" data-portal-view="overview">
+        <article><span>Available stock</span><strong id="portal-current-stock">0</strong><small>Combined item quantities</small></article>
+        <article><span>Stock inward</span><strong id="portal-inward">0</strong><small>Selected dates</small></article>
+        <article><span>Stock outward</span><strong id="portal-outward">0</strong><small>Selected dates</small></article>
+      </div>
+      <div class="portal-category-section" data-portal-view="overview">
+        <div class="portal-category-heading">
+          <div><span class="portal-eyebrow">PRODUCT-WISE STOCK</span><h2>Separate category stock</h2></div>
+        </div>
+        <div class="portal-category-metrics" id="portal-category-stocks"></div>
+      </div>
+      <div class="portal-grid" data-portal-view="search">
+        <article class="portal-card" id="portal-stock-search">
+          <div class="portal-card-heading"><div><h2>Search stock</h2><p>Find an exact part number or description match.</p></div></div>
+          <label for="portal-search">Part number or description</label>
+          <input id="portal-search" type="search" placeholder="e.g. AF-2201 or air filter">
+          <div class="portal-table-scroll"><table><thead><tr><th>Part number</th><th>Description</th><th>Available</th><th>Unit</th></tr></thead><tbody id="portal-search-results"></tbody></table></div>
+        </article>
+        <article class="portal-card">
+          <div class="portal-card-heading"><div><h2 id="portal-item-form-heading">Add stock item</h2><p>Opening quantity is saved as an inward ledger entry.</p></div></div>
+          <form id="portal-item-form">
+            <input id="portal-item-id" type="hidden">
+            <label for="portal-category">Product category</label><select id="portal-category" required><option value="Kaeser Office Stock">Kaeser Office Stock</option><option value="Everest Vacuum Pumps">Everest Vacuum Pumps</option><option value="Hormann">Hormann</option><option value="Shift Air">Shift Air</option><option value="Godrej">Godrej</option><option value="Other material">Other material</option><option value="General">General</option></select>
+            <label for="portal-part">Part number</label><input id="portal-part" maxlength="80" required>
+            <label for="portal-description">Description</label><input id="portal-description" maxlength="255" required>
+            <div class="portal-fields"><label>Unit<input id="portal-unit" maxlength="30" value="pcs" required></label><label>Reorder level<input id="portal-reorder" type="number" min="0" step="0.001" value="0" required></label></div>
+            <label for="portal-opening">Opening stock <small>(new items only)</small></label><input id="portal-opening" type="number" min="0" step="0.001" value="0">
+            <button class="portal-primary" type="submit">Save item</button>
+            <button class="portal-link-button" id="portal-cancel-edit" type="button" hidden>Cancel edit</button>
+          </form>
+        </article>
+      </div>
+      <article class="portal-card portal-full" id="portal-stock-items" data-portal-view="stock-items">
+        <div class="portal-card-heading"><div><h2>Stock items</h2><p>Edit item details or archive items without erasing their history.</p></div></div>
+        <div class="portal-stock-list-controls">
+          <label for="portal-stock-category-filter">Select stock category
+            <select id="portal-stock-category-filter">
+              <option value="">All stock categories</option>
+              <option value="Kaeser Office Stock">Kaeser Stock</option>
+              <option value="Everest Vacuum Pumps">Everest Vacuum Pumps Stock</option>
+              <option value="Hormann">Hormann Stock</option>
+              <option value="Shift Air">Shift Air Stock</option>
+              <option value="Godrej">Godrej Stock</option>
+              <option value="Other material">Other material Stock</option>
+            </select>
+          </label>
+          <label for="portal-stock-items-search">Search stock
+            <input id="portal-stock-items-search" type="search" placeholder="Part number or description">
+          </label>
+          <button class="portal-primary portal-compact" id="portal-import-workbook" type="button">Import workbook</button>
+        </div>
+        <div class="portal-table-scroll"><table><thead><tr><th>Category</th><th>Part number</th><th>Description</th><th>Available</th><th>Reorder level</th><th>Actions</th></tr></thead><tbody id="portal-items"></tbody></table></div>
+      </article>
+      <div class="portal-grid" id="portal-movement" data-portal-view="movement">
+        <article class="portal-card">
+          <div class="portal-card-heading"><div><h2>Stock inward entry</h2><p>Add received stock to an item.</p></div></div>
+          <form id="portal-inward-form">
+            <label for="portal-inward-category">Product category</label><select id="portal-inward-category"><option value="">All categories</option></select>
+            <label for="portal-inward-item">Stock item</label><select id="portal-inward-item" required><option value="">Add an item first</option></select>
+            <label for="portal-inward-quantity">Quantity</label><input id="portal-inward-quantity" type="number" min="0.001" step="0.001" required>
+            <label for="portal-inward-date">Date</label><input id="portal-inward-date" type="date" required>
+            <label for="portal-inward-party">Supplier / source</label><input id="portal-inward-party" maxlength="180">
+            <label for="portal-inward-reference">PO / reference number</label><input id="portal-inward-reference" maxlength="100">
+            <label for="portal-inward-notes">Notes</label><textarea id="portal-inward-notes" maxlength="500" rows="2"></textarea>
+            <button class="portal-primary" type="submit">Save stock inward</button>
+          </form>
+        </article>
+        <article class="portal-card">
+          <div class="portal-card-heading"><div><h2>Stock outward entry</h2><p>Record consumed, issued to service, returned or other outward stock activity.</p></div></div>
+          <form id="portal-outward-form">
+            <label for="portal-outward-category">Product category</label><select id="portal-outward-category"><option value="">All categories</option></select>
+            <label for="portal-outward-item">Stock item</label><select id="portal-outward-item" required><option value="">Add an item first</option></select>
+            <label for="portal-outward-quantity">Quantity</label><input id="portal-outward-quantity" type="number" min="0.001" step="0.001" required>
+            <label for="portal-outward-date">Date</label><input id="portal-outward-date" type="date" required>
+            <label for="portal-outward-party">Customer / person / service location</label><input id="portal-outward-party" maxlength="180">
+            <label for="portal-outward-reference">Reference / document number</label><input id="portal-outward-reference" maxlength="100">
+            <label for="portal-outward-notes">Notes</label><textarea id="portal-outward-notes" maxlength="500" rows="2"></textarea>
+            <button class="portal-primary" type="submit">Save stock outward</button>
+          </form>
+        </article>
+        <article class="portal-card">
+          <div class="portal-card-heading"><div><h2>Recent stock inward &amp; outward</h2><p>Latest recorded stock movements.</p></div></div>
+          <div class="portal-table-scroll"><table><thead><tr><th>Date</th><th>Type</th><th>Part</th><th>Qty</th><th>Party / reference</th></tr></thead><tbody id="portal-recent-movements"></tbody></table></div>
+        </article>
+      </div>
+      <article class="portal-card portal-full" data-portal-view="reports">
+        <div class="portal-card-heading"><div><h2>Inventory reports</h2><p>Run a date-filtered report, print to PDF or download an Excel workbook.</p></div></div>
+        <div class="portal-report-controls">
+          <label>Report type<select id="portal-report-type"><option value="all">All movements</option><option value="inward">Inward</option><option value="outward">Outward</option></select></label>
+          <label>Part / description<input id="portal-report-search" type="search" placeholder="Optional search"></label>
+          <button class="portal-secondary" id="portal-run-report" type="button">Run report</button>
+          <button class="portal-secondary" id="portal-print-report" type="button">Print / Save PDF</button>
+          <button class="portal-primary portal-compact" id="portal-download-report" type="button">Download .xlsx</button>
+        </div>
+        <p class="portal-report-status" id="portal-report-status" role="status">Choose a date range and run a report.</p>
+        <div class="portal-table-scroll"><table><thead><tr><th>Date</th><th>Type</th><th>Part number</th><th>Description</th><th>Qty</th><th>Unit</th><th>Party</th><th>Reference</th><th>Notes</th></tr></thead><tbody id="portal-report-rows"></tbody></table></div>
+      </article>
+      <p class="portal-toast" id="portal-toast" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+  <footer class="portal-footer">© <span id="portal-year"></span> Aadya Engineering Equipment Private Limited</footer>
+</body>
+</html>

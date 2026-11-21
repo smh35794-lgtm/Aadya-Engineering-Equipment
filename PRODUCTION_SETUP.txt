@@ -1,0 +1,68 @@
+AADYA WEBSITE + PHP/MYSQL ADMIN — SETUP GUIDE
+
+THIS VERSION ADDS A SERVER-SIDE STARTER BACKEND
+- PHP API with PDO prepared statements
+- MySQL tables for admin users, auth tokens, login OTPs, website content, company settings, and enquiries
+- Server-side password hashing, verified email, email OTP login, Admin/MD roles, PHP sessions, CSRF tokens and safer session cookies
+- Admin content/SEO/contact settings saved to MySQL and read by the public website
+- Enquiry form submissions stored in MySQL and status management in the admin panel
+- Image WebP variants and original website assets retained
+
+REQUIREMENTS
+- Hosting that supports PHP 8.1+ and MySQL/MariaDB (for example a PHP hosting plan, not a static-only site builder)
+- HTTPS enabled before public use
+- MySQL database and database user
+
+DEPLOYMENT STEPS
+1. BACK UP the current live site and database before replacing anything.
+2. In hosting control panel, create a MySQL database and a database user. Grant that user privileges only on this database.
+3. For a new database only, open phpMyAdmin, select the empty database, and import api/database.sql. It contains the current complete schema; do not run the migration files afterward.
+4. For an existing database, do not import api/database.sql over it. Back up first, check which migrations have already been applied, and run only the missing files from api/migrations/ in numeric order (001 through 005). Each migration is a one-time schema change.
+5. Copy api/config.sample.php to api/config.local.php. Fill in the real database host/name/user/password. Never share this file publicly.
+6. Configure `app_key` with a cryptographically random secret of at least 32 bytes, `app_url` with the HTTPS site origin, and the SMTP host/port/security/username/password/sender fields. Alternatively use the `AADYA_APP_*` and `AADYA_SMTP_*` environment variables. Never commit or share SMTP credentials.
+7. Upload the entire project preserving its folders. The public index.html, assets/, styles.css and scripts must remain in the same relative layout. Upload the api/ folder too.
+8. Create the initial account from the hosting terminal/SSH:
+   php api/create_admin.php your_admin_username
+   Enter a strong password of at least 12 characters when prompted.
+   The script refuses HTTP requests. Do not expose a web-based password installer.
+9. Bootstrap the first MD using that account and the owner's email:
+   php api/bootstrap_md.php your_admin_username owner@example.com
+   This CLI-only command preserves the account password and marks the owner's email verified. The MD can invite Admin or MD accounts under Team access.
+10. Ensure api/config.local.php and api/imports/ are not publicly downloadable. The included api/.htaccess blocks config/schema/CLI setup files and api/imports/.htaccess blocks imported inventory workbooks on Apache. Confirm the host permits these rules with AllowOverride; on Nginx, deny direct requests to `/api/config*.php`, `/api/*.sql`, `/api/create_admin.php`, `/api/bootstrap_md.php` and `/api/imports/` while allowing the application to read the files.
+11. Visit https://YOUR-DOMAIN/admin/, verify SMTP delivery, and complete email verification and OTP sign-in.
+12. Test invitations, role restrictions, logout, homepage content edits and enquiries. Confirm enquiries appear in the admin panel.
+13. Run PageSpeed Insights, check mobile layout, and test backup/restore before announcing launch.
+
+IMPORTANT HOSTING NOTE
+If your current plan is a drag-and-drop/static Website Builder plan that does not execute PHP, this backend will not run there. You need PHP/MySQL hosting or a separately hosted API. Do not upload database credentials to a public folder.
+
+SECURITY / PRODUCTION CHECKLIST
+- Use HTTPS only; force HTTP to HTTPS in hosting.
+- Use a strong unique admin password; restrict hosting account access and enable MFA where available.
+- Keep PHP and hosting software updated.
+- Add server-level rate limiting/WAF for login and enquiry endpoints.
+- Configure an authenticated SMTP relay with TLS (`starttls`, usually port 587, or `ssl`, usually port 465). The app sends verification links, invitations and login OTPs through this relay.
+- Keep public signup restricted to Admin. The first MD is provisioned by the CLI bootstrap; subsequent Admin/MD accounts require an MD invitation.
+- Set up database/file backups and test restores.
+- Review privacy policy/consent and retention requirements for enquiry data.
+- Configure a Content Security Policy compatible with the website before enabling it.
+- Admin passwords are stored using password_hash(); passwords are never stored as plaintext.
+
+TROUBLESHOOTING
+- “Server setup incomplete”: create api/config.local.php from api/config.sample.php.
+- Database connection errors: verify database host, database name, username, password and privileges.
+- API returns 404: verify api/index.php uploaded and the site is hosted under the expected path.
+- Login fails: create an admin account with the CLI script and check PHP error logs.
+- API returns 500: check PHP error logs; do not display detailed database errors to visitors.
+
+FILES
+api/index.php             API endpoints
+api/auth.php              Email verification, OTP login, invitations and role checks
+api/database.sql          Database schema and initial website content
+api/migrations/           Existing-database upgrade scripts (run in order)
+api/config.sample.php     Database configuration template
+api/config.local.php      Your private real credentials (create yourself; do not share)
+api/create_admin.php      CLI-only first-admin creator
+api/bootstrap_md.php      CLI-only first Managing Director setup
+admin/                    Admin panel
+index.html                Public website

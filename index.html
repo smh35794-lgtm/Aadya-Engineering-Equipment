@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aadya Engineering Equipment Private Limited - industrial air compressor sales, spares, service and maintenance." />
+  <title>Aadya Engineering Equipment | Industrial Air Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=nav-polish-1" />
+  <script src="script.js?v=admin-cms-controls-1" defer></script>
+  <script src="website-admin.js?v=admin-cms-controls-1" defer></script>
+</head>
+
+<body>
+  <header class="site-header" id="top">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Aadya Engineering Equipment home"><img class="brand-logo"
+          src="assets/aadya-logo.webp" alt=""><span
+          class="brand-name"><span data-admin-field="page_brand_name">AADYA</span> <small data-admin-field="page_brand_descriptor">ENGINEERING EQUIPMENT</small></span></a>
+      <button class="menu-toggle" aria-label="Toggle navigation"
+        aria-expanded="false"><span></span><span></span><span></span></button>
+      <nav class="nav-links" aria-label="Main navigation"><a href="#home" data-admin-field="page_nav_home">Home</a>
+        <a href="?view=clients#clients-page">Clients</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="products-nav-menu">
+            <span data-admin-field="page_nav_products">Products</span><span class="nav-dropdown-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="nav-dropdown-menu" id="products-nav-menu" aria-label="Product catalogues" hidden>
+            <a href="?view=products#products">Products Catalogue</a>
+            <a href="?view=spare-parts#spare-parts-section">KAESER spare parts</a>
+            <a href="?view=spare-parts&amp;brand=everest#spare-parts-section">EVEREST vacuum pump spares</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="about-nav-menu">
+            <span data-admin-field="page_nav_about">About</span><span class="nav-dropdown-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="nav-dropdown-menu" id="about-nav-menu" aria-label="About Aadya" hidden>
+            <a href="#about">About Us</a>
+            <a href="?view=team#team-page">Our Team</a>
+            <a href="#our-office">Our Office</a>
+            <a href="#contact">Contact Us</a>
+          </div>
+        </div>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" type="button" aria-expanded="false" aria-controls="services-nav-menu">
+            <span data-admin-field="page_nav_services">Services</span><span class="nav-dropdown-chevron" aria-hidden="true"></span>
+          </button>
+          <div class="nav-dropdown-menu" id="services-nav-menu" aria-label="Service options" hidden>
+            <a href="?view=service&amp;service=equipment#service-detail-page">Air Compressor Sales</a>
+            <a href="?view=service&amp;service=parts#service-detail-page">Spare Parts</a>
+            <a href="?view=service&amp;service=repairs#service-detail-page">Service &amp; Repairs</a>
+            <a href="?view=amc#amc-detail-page">AMC &amp; Preventive Care</a>
+          </div>
+        </div>
+        <a
+          href="#solutions" data-admin-field="page_nav_solutions">Solutions</a>          <a
+            href="#process" data-admin-field="page_nav_process">Our process</a><a class="nav-cta"
+            href="?view=quote"><span data-admin-field="page_nav_cta">Request a quote</span>
+          <span>↗</span></a><a class="nav-login" href="inventory.html">Login</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="clients-page" id="clients-page" data-admin-section="clients-page" aria-labelledby="clients-page-title" hidden>
+      <div class="clients-hero">
+        <div class="container clients-hero-inner">
+          <span class="clients-eyebrow"><span></span> OUR ESTEEMED CLIENTS</span>
+          <h1 id="clients-page-title">Built on trusted <em>partnerships.</em></h1>
+          <p>We work with established industrial brands to support dependable equipment, service and compressed-air solutions.</p>
+        </div>
+      </div>
+      <div class="clients-content section">
+        <div class="container">
+          <div class="clients-section-heading">
+            <div>
+              <span class="clients-eyebrow dark"><span></span> ANDHRA PRADESH</span>
+              <h2>Our valued clients.<br><em>Relationships that last.</em></h2>
+            </div>
+            <p>Explore the client logos featured on page 7 of the Aadya Engineering company profile.</p>
+          </div>
+          <div class="clients-marquee" role="region" aria-label="Client and partner images scrolling right to left">
+            <div class="clients-marquee-track" data-client-marquee-track></div>
+          </div>
+          <div class="clients-bottom-note">
+            <span aria-hidden="true">✳</span>
+            <p>Looking for the right industrial solution? <a href="#contact">Talk to our team <span aria-hidden="true">↗</span></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <dialog class="clients-gallery-dialog" id="clients-gallery-dialog" aria-labelledby="clients-gallery-title">
+      <div class="clients-gallery-header">
+        <button class="clients-gallery-back" id="clients-gallery-back" type="button" hidden>← All clients</button>
+        <div><span class="clients-eyebrow dark"><span></span> OUR ESTEEMED CLIENTS</span><h2 id="clients-gallery-title">Our All Clients</h2></div>
+        <button class="clients-gallery-close" type="button" aria-label="Close all client logos">×</button>
+      </div>
+      <div class="clients-gallery-grid" id="clients-gallery-grid" role="list"></div>
+      <section class="clients-gallery-detail" id="clients-gallery-detail" aria-live="polite" hidden>
+        <div class="clients-gallery-detail-logo"><img id="clients-detail-image" src="" alt=""></div>
+        <div class="clients-gallery-detail-copy">
+          <span class="clients-eyebrow dark"><span></span> CLIENT PROFILE</span>
+          <h3 id="clients-detail-name"></h3>
+          <p id="clients-detail-description"></p>
+          <a id="clients-detail-source" href="" target="_blank" rel="noopener noreferrer">Public company information ↗</a>
+          <p class="clients-gallery-detail-note">This summary describes the organization, based on publicly available information. It does not confirm a business relationship or project with Aadya Engineering.</p>
+        </div>
+      </section>
+    </dialog>
+    <section class="service-detail-page" id="service-detail-page" data-admin-section="service-detail-page" aria-labelledby="service-detail-title" hidden>
+      <div class="service-detail-hero">
+        <div class="container service-detail-hero-grid">
+          <div class="service-detail-copy">
+            <a class="service-detail-back" href="#services">← Back to services</a>
+            <span class="service-detail-eyebrow"><span></span><span id="service-detail-eyebrow"></span></span>
+            <h1 id="service-detail-title"></h1>
+            <p id="service-detail-intro"></p>
+            <div class="service-detail-hero-actions">
+              <a class="button button-primary" id="service-detail-cta" href="#contact" data-product-enquiry=""><span id="service-detail-cta-label"></span><span>↗</span></a>
+              <a class="service-detail-text-link" href="#service-detail-scope">Explore service details <span>↓</span></a>
+            </div>
+            <div class="service-detail-highlights" id="service-detail-highlights"></div>
+          </div>
+          <div class="service-detail-visual">
+            <div class="service-detail-visual-glow"></div>
+            <div class="service-detail-image-wrap"><img id="service-detail-image" src="" alt=""></div>
+            <span class="service-detail-floating service-detail-floating-top"><b>01</b><span id="service-detail-float-one"></span></span>
+            <span class="service-detail-floating service-detail-floating-bottom"><b>✓</b><span id="service-detail-float-two"></span></span>
+            <span class="service-detail-visual-spark">✦</span>
+          </div>
+        </div>
+      </div>
+      <div class="service-detail-overview section">
+        <div class="container">
+          <div class="service-detail-section-heading">
+            <span class="service-detail-eyebrow"><span></span><span id="service-detail-overview-label"></span></span>
+            <h2 id="service-detail-overview-title"></h2>
+            <p id="service-detail-overview-copy"></p>
+          </div>
+          <div class="service-detail-benefits" id="service-detail-benefits"></div>
+        </div>
+      </div>
+      <div class="service-detail-scope section" id="service-detail-scope">
+        <div class="container service-detail-scope-layout">
+          <div class="service-detail-scope-copy">
+            <span class="service-detail-eyebrow"><span></span> SERVICE SCOPE</span>
+            <h2 id="service-detail-scope-title"></h2>
+            <p id="service-detail-scope-copy"></p>
+            <a class="button button-primary" href="#contact" id="service-detail-scope-cta" data-product-enquiry=""><span id="service-detail-scope-cta-label"></span><span>↗</span></a>
+            <p class="service-detail-scope-note" id="service-detail-scope-note"></p>
+          </div>
+          <div class="service-detail-checklist" id="service-detail-checklist"></div>
+        </div>
+      </div>
+      <div class="service-detail-process section">
+        <div class="container">
+          <div class="service-detail-section-heading">
+            <span class="service-detail-eyebrow"><span></span> A CLEAR PATH FORWARD</span>
+            <h2 id="service-detail-process-title"></h2>
+          </div>
+          <div class="service-detail-steps" id="service-detail-steps"></div>
+        </div>
+      </div>
+      <div class="service-detail-faq section">
+        <div class="container service-detail-faq-layout">
+          <div class="service-detail-section-heading">
+            <span class="service-detail-eyebrow"><span></span> SERVICE FAQ</span>
+            <h2>Helpful answers<br><em>before you begin.</em></h2>
+            <p>Share your equipment details and our team can help clarify the right next step.</p>
+          </div>
+          <div class="service-detail-faq-list" id="service-detail-faq"></div>
+        </div>
+      </div>
+      <div class="service-detail-final-cta">
+        <div class="container service-detail-final-inner">
+          <div><span class="service-detail-eyebrow"><span></span> LET'S TALK ABOUT YOUR REQUIREMENT</span><h2 id="service-detail-final-title"></h2><p id="service-detail-final-copy"></p></div>
+          <a class="button button-primary" href="#contact" id="service-detail-final-cta" data-product-enquiry=""><span id="service-detail-final-cta-label"></span><span>↗</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="amc-page" id="amc-detail-page" data-admin-section="amc-detail-page" aria-labelledby="amc-page-title" hidden>
+      <div class="amc-hero">
+        <div class="container amc-hero-grid">
+          <div class="amc-hero-copy">
+            <a class="amc-back-link" href="#services">← Back to services</a>
+            <span class="amc-eyebrow"><span></span> PLANNED CARE FOR CRITICAL EQUIPMENT</span>
+            <h1 id="amc-page-title">Keep your operation moving with <em>AMC support.</em></h1>
+            <p>Annual Maintenance Contract support for industrial air compressors and vacuum pumps—planned around your equipment, operating hours and site requirements.</p>
+            <div class="amc-hero-actions">
+              <a class="button button-primary" href="#contact" data-product-enquiry="Annual Maintenance Contract (AMC) enquiry">Request an AMC proposal <span>↗</span></a>
+              <a class="amc-text-link" href="#amc-scope">Explore what is covered <span>↓</span></a>
+            </div>
+            <div class="amc-trust-points">
+              <span><b>01</b> Planned visits</span>
+              <span><b>02</b> Equipment checks</span>
+              <span><b>03</b> Service reporting</span>
+            </div>
+          </div>
+          <div class="amc-hero-art" aria-label="Illustration of an industrial compressor under scheduled maintenance">
+            <div class="amc-art-orbit amc-art-orbit-one"></div>
+            <div class="amc-art-orbit amc-art-orbit-two"></div>
+            <div class="amc-art-glow"></div>
+            <div class="amc-art-machine">
+              <div class="amc-machine-top"></div>
+              <div class="amc-machine-panel"><span></span><span></span><span></span><i></i></div>
+              <div class="amc-machine-vent"></div>
+              <div class="amc-machine-base"></div>
+              <div class="amc-machine-feet"></div>
+            </div>
+            <div class="amc-art-badge amc-art-badge-check"><span>✓</span><div><b>Planned</b><small>maintenance</small></div></div>
+            <div class="amc-art-badge amc-art-badge-time"><span>↻</span><div><b>Uptime</b><small>focused care</small></div></div>
+            <span class="amc-art-spark amc-art-spark-one">✦</span>
+            <span class="amc-art-spark amc-art-spark-two">✳</span>
+          </div>
+        </div>
+        <a class="amc-scroll-cue" href="#amc-overview"><span></span> Scroll to explore</a>
+      </div>
+      <div class="amc-overview section" id="amc-overview">
+        <div class="container">
+          <div class="amc-section-heading">
+            <span class="amc-eyebrow"><span></span> WHY PLAN MAINTENANCE?</span>
+            <h2>Small checks today.<br><em>More confidence tomorrow.</em></h2>
+            <p>Routine maintenance helps identify developing issues, supports dependable performance and gives your team a clearer view of equipment condition.</p>
+          </div>
+          <div class="amc-benefit-grid">
+            <article class="amc-benefit-card amc-color-coral">
+              <span class="amc-benefit-icon">⌁</span><span class="amc-card-index">01 / PREVENT</span>
+              <h3>Reduce avoidable downtime</h3>
+              <p>Scheduled inspections can surface wear, leaks or operating concerns before they become bigger interruptions.</p>
+            </article>
+            <article class="amc-benefit-card amc-color-blue">
+              <span class="amc-benefit-icon">◷</span><span class="amc-card-index">02 / PLAN</span>
+              <h3>Plan service with less disruption</h3>
+              <p>Agree visit windows and maintenance priorities around your production schedule and equipment criticality.</p>
+            </article>
+            <article class="amc-benefit-card amc-color-green">
+              <span class="amc-benefit-icon">▤</span><span class="amc-card-index">03 / TRACK</span>
+              <h3>Know what was checked</h3>
+              <p>Receive service observations and recommendations so your team can make informed maintenance decisions.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="amc-scope section" id="amc-scope">
+        <div class="container amc-scope-layout">
+          <div class="amc-scope-intro">
+            <span class="amc-eyebrow"><span></span> TAILORED SERVICE SCOPE</span>
+            <h2>What can an AMC include?</h2>
+            <p>Every proposal is based on the equipment make, model, age, operating hours and site conditions. The agreed contract will list the exact visit frequency, tasks and parts coverage.</p>
+            <a class="button button-primary" href="#contact" data-product-enquiry="AMC service scope and equipment assessment">Discuss your equipment <span>↗</span></a>
+            <p class="amc-scope-footnote">The following are typical scope items for discussion—not a promise that every item is included in every contract.</p>
+          </div>
+          <div class="amc-checklist">
+            <article><span class="amc-check-icon">✓</span><div><h3>Condition and safety inspection</h3><p>Visual checks for leaks, abnormal noise, vibration, cleanliness and accessible safety concerns.</p></div><b>01</b></article>
+            <article><span class="amc-check-icon">✓</span><div><h3>Operating parameter review</h3><p>Review available pressure, temperature, run-hour and alarm information against normal operation.</p></div><b>02</b></article>
+            <article><span class="amc-check-icon">✓</span><div><h3>Preventive maintenance tasks</h3><p>Cleaning and routine service tasks selected for the equipment, manufacturer guidance and agreed scope.</p></div><b>03</b></article>
+            <article><span class="amc-check-icon">✓</span><div><h3>Recommendations and service report</h3><p>Record work completed, observations, pending actions and parts or repairs recommended for approval.</p></div><b>04</b></article>
+            <article><span class="amc-check-icon">✓</span><div><h3>Vacuum pump maintenance review</h3><p>For vacuum equipment, inspect applicable seals, filters, lubrication and operating condition as agreed.</p></div><b>05</b></article>
+          </div>
+        </div>
+      </div>
+      <div class="amc-plans section">
+        <div class="container">
+          <div class="amc-section-heading amc-center-heading">
+            <span class="amc-eyebrow"><span></span> A PLAN THAT FITS YOUR PLANT</span>
+            <h2>Choose the support level<br><em>your operation needs.</em></h2>
+            <p>There is no one-size-fits-all maintenance contract. We will assess your equipment list and prepare a clear, itemized scope for review.</p>
+          </div>
+          <div class="amc-plan-grid">
+            <article class="amc-plan-card">
+              <span class="amc-plan-label">ESSENTIAL</span><span class="amc-plan-icon">◷</span>
+              <h3>Scheduled inspections</h3><p>Planned condition reviews and maintenance recommendations for sites with an in-house maintenance team.</p>
+              <ul><li>Agreed periodic visits</li><li>Equipment condition checks</li><li>Visit report and recommendations</li></ul>
+              <a href="#contact" data-product-enquiry="AMC Essential plan enquiry">Ask about this plan <span>↗</span></a>
+            </article>
+            <article class="amc-plan-card amc-plan-featured">
+              <span class="amc-plan-ribbon">POPULAR SCOPE</span><span class="amc-plan-label">PREVENTIVE</span><span class="amc-plan-icon">✳</span>
+              <h3>Planned maintenance</h3><p>Preventive service activities scheduled against equipment requirements and your approved maintenance calendar.</p>
+              <ul><li>Agreed periodic service visits</li><li>Specified routine maintenance tasks</li><li>Service reports and action tracking</li></ul>
+              <a href="#contact" data-product-enquiry="AMC Preventive plan enquiry">Request a proposal <span>↗</span></a>
+            </article>
+            <article class="amc-plan-card">
+              <span class="amc-plan-label">COMPREHENSIVE</span><span class="amc-plan-icon">✦</span>
+              <h3>Extended service support</h3><p>A broader support scope can be evaluated for critical equipment and multi-machine sites.</p>
+              <ul><li>Scope defined per machine</li><li>Optional parts and repair coverage</li><li>Response terms agreed in writing</li></ul>
+              <a href="#contact" data-product-enquiry="AMC Comprehensive plan enquiry">Discuss coverage <span>↗</span></a>
+            </article>
+          </div>
+          <p class="amc-plan-disclaimer">Plan names describe possible service levels only. Availability, visit frequency, response times, parts and pricing are confirmed in a written proposal.</p>
+        </div>
+      </div>
+      <div class="amc-process section">
+        <div class="container">
+          <div class="amc-section-heading">
+            <span class="amc-eyebrow"><span></span> SIMPLE, TRANSPARENT START</span>
+            <h2>From equipment list<br><em>to planned care.</em></h2>
+          </div>
+          <div class="amc-process-grid">
+            <article><span>01</span><i>↗</i><h3>Share your equipment</h3><p>Send make, model, serial number, location and approximate operating hours.</p></article>
+            <article><span>02</span><i>⌕</i><h3>Review the requirement</h3><p>We assess equipment condition, criticality and your preferred maintenance windows.</p></article>
+            <article><span>03</span><i>▤</i><h3>Approve the proposal</h3><p>Review the included tasks, visit plan, exclusions, price and contract terms.</p></article>
+            <article><span>04</span><i>✓</i><h3>Schedule and report</h3><p>Visits are coordinated with your site contact and documented after service.</p></article>
+          </div>
+        </div>
+      </div>
+      <div class="amc-faq section">
+        <div class="container amc-faq-layout">
+          <div class="amc-section-heading">
+            <span class="amc-eyebrow"><span></span> GOOD TO KNOW</span>
+            <h2>AMC questions,<br><em>answered.</em></h2>
+            <p>We make the inclusions and exclusions clear before you approve a contract.</p>
+          </div>
+          <div class="amc-faq-list">
+            <details><summary>Are spare parts included in the AMC price?<span>+</span></summary><p>Only when specifically listed in the written proposal. Filters, oil, consumables, major components and corrective repairs may be quoted separately.</p></details>
+            <details><summary>How many maintenance visits are included?<span>+</span></summary><p>Visit frequency is selected based on equipment recommendations, operating hours, site conditions and your requirements, then stated in the proposal.</p></details>
+            <details><summary>Does an AMC guarantee zero breakdowns?<span>+</span></summary><p>No maintenance contract can guarantee that equipment will never fail. Planned checks help manage risk; actual reliability depends on equipment condition, operation and many site factors.</p></details>
+            <details><summary>Can I include both compressors and vacuum pumps?<span>+</span></summary><p>Yes. Share the equipment list and model details so the service scope can be assessed for each machine.</p></details>
+            <details><summary>What information is needed for a quote?<span>+</span></summary><p>Equipment make, model, serial number, location, operating hours, current service history and any known issues help us prepare a relevant proposal.</p></details>
+          </div>
+        </div>
+      </div>
+      <div class="amc-cta">
+        <div class="container amc-cta-inner">
+          <div><span class="amc-eyebrow"><span></span> LET'S PLAN YOUR NEXT SERVICE</span><h2>Build an AMC around<br><em>your equipment.</em></h2><p>Send your equipment details and our team will follow up to discuss a suitable scope.</p></div>
+          <a class="button button-primary" href="#contact" data-product-enquiry="Annual Maintenance Contract (AMC) proposal request">Request an AMC proposal <span>↗</span></a>
+        </div>
+      </div>
+      <dialog class="amc-proposal-dialog" id="amc-proposal-dialog" aria-labelledby="amc-proposal-dialog-title">
+        <button class="amc-proposal-close" type="button" aria-label="Close enquiry form">×</button>
+        <span class="amc-eyebrow" id="service-enquiry-dialog-eyebrow"><span></span> SERVICE ENQUIRY</span>
+        <h2 id="amc-proposal-dialog-title">Tell us about your requirement.</h2>
+        <p id="service-enquiry-dialog-copy">Share your contact and equipment details. Our team will follow up to discuss the right next step.</p>
+        <div id="amc-proposal-form-slot"></div>
+      </dialog>
+    </section>
+    <section class="team-page" id="team-page" data-admin-section="team-page" aria-labelledby="team-page-title" hidden>
+      <div class="team-hero">
+        <div class="container team-hero-grid">
+          <div class="team-hero-copy">
+            <a class="team-back-link" href="#home">← Home</a>
+            <span class="team-eyebrow"><span></span> CAREERS AT AADYA</span>
+            <h1 id="team-page-title">Build your career with a team keeping industry moving.</h1>
+            <p>Bring your skills, curiosity and commitment to work that supports industrial equipment and the people who depend on it. We welcome interest from professionals who value reliable service and lasting customer relationships.</p>
+            <a class="button button-primary" href="#team-opportunities">Explore career areas <span>↓</span></a>
+            <div class="team-trust-points"><span>Engineering support</span><span>Customer-focused work</span><span>Visakhapatnam, India</span></div>
+          </div>
+          <div class="team-hero-visual">
+            <img src="assets/team-photo.webp" alt="Aadya Engineering Equipment team" loading="lazy">
+            <span class="team-photo-caption">PEOPLE. PRACTICAL EXPERTISE. INDUSTRIAL IMPACT.</span>
+          </div>
+        </div>
+      </div>
+      <div class="team-intro section">
+        <div class="container team-intro-grid">
+          <div><span class="team-eyebrow dark"><span></span> GROW WITH US</span><h2>Good work starts with people who care.</h2></div>
+          <p>At Aadya, equipment knowledge and customer support go hand in hand. We value clear communication, responsible work and a willingness to learn. Explore the career areas below and tell us where your experience could make a difference.</p>
+        </div>
+      </div>
+      <div class="team-opportunities section" id="team-opportunities">
+        <div class="container">
+          <div class="team-section-heading">
+            <span class="team-eyebrow dark"><span></span> CAREER AREAS</span>
+            <h2>Find where your strengths fit.</h2>
+            <p>These are areas of work at Aadya, not a confirmation of current vacancies. Share your interest and our team can follow up when a suitable opportunity is available.</p>
+          </div>
+          <div class="team-role-grid">
+            <article class="team-role-card team-role-blue">
+              <span class="team-role-index">01 / FIELD & TECHNICAL</span>
+              <div class="team-role-icon" aria-hidden="true">⚙</div>
+              <h3>Service Engineering</h3>
+              <p>Support compressor and vacuum-pump maintenance, troubleshooting, service coordination and customer follow-up.</p>
+              <span class="team-role-skills">Equipment care · Problem solving · Field support</span>
+            </article>
+            <article class="team-role-card team-role-red">
+              <span class="team-role-index">02 / CUSTOMER & APPLICATIONS</span>
+              <div class="team-role-icon" aria-hidden="true">↗</div>
+              <h3>Industrial Sales & Applications</h3>
+              <p>Understand customer requirements, help evaluate equipment options and coordinate proposals with technical teams.</p>
+              <span class="team-role-skills">Customer relationships · Applications · Communication</span>
+            </article>
+            <article class="team-role-card team-role-teal">
+              <span class="team-role-index">03 / PARTS & OPERATIONS</span>
+              <div class="team-role-icon" aria-hidden="true">▤</div>
+              <h3>Parts & Customer Support</h3>
+              <p>Help organize parts enquiries, equipment details and clear communication across the customer support process.</p>
+              <span class="team-role-skills">Organization · Parts coordination · Customer care</span>
+            </article>
+          </div>
+        </div>
+      </div>
+      <div class="team-culture section">
+        <div class="container">
+          <div class="team-section-heading">
+            <span class="team-eyebrow"><span></span> WHY WORK WITH US</span>
+            <h2>Make your work matter.</h2>
+          </div>
+          <div class="team-culture-grid">
+            <article><span>01</span><h3>Learn through real work</h3><p>Build practical knowledge around industrial equipment, customer applications and service requirements.</p></article>
+            <article><span>02</span><h3>Work as one team</h3><p>Coordinate across sales, parts and service so customers receive thoughtful, connected support.</p></article>
+            <article><span>03</span><h3>Grow your expertise</h3><p>Strengthen technical and professional skills through hands-on experience and a learning mindset.</p></article>
+            <article><span>04</span><h3>Support essential operations</h3><p>Help industrial customers maintain the equipment and systems their work relies on.</p></article>
+          </div>
+        </div>
+      </div>
+      <div class="team-apply section">
+        <div class="container team-apply-card">
+          <div><span class="team-eyebrow"><span></span> YOUR NEXT STEP</span><h2>Interested in joining Aadya?</h2><p>Tell us which career area interests you, along with your experience and contact details. We’ll review your enquiry and get in touch if there’s a suitable next step.</p></div>
+          <a class="button button-primary" href="#contact" data-product-enquiry="Career interest and team application">Share your interest <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="section spare-part-detail-page" id="spare-part-detail-page" data-admin-section="spare-part-detail-page" aria-labelledby="spare-part-detail-title" hidden>
+      <div class="container">
+        <nav class="spare-part-breadcrumbs" aria-label="Breadcrumb">
+          <a data-spare-part-home href="#products">Products</a>
+          <span aria-hidden="true">/</span>
+          <a data-spare-part-home id="spare-part-brand-link" href="#spare-parts-section">KAESER spare parts</a>
+          <span aria-hidden="true">/</span>
+          <span id="spare-part-detail-breadcrumb"></span>
+        </nav>
+        <div class="spare-part-detail-layout">
+          <div class="spare-part-detail-visual">
+            <img id="spare-part-detail-image" src="" alt="">
+            <span class="spare-part-detail-image-label" id="spare-part-detail-image-label"></span>
+          </div>
+          <div class="spare-part-detail-copy">
+            <span class="product-category" id="spare-part-detail-category"></span>
+            <h1 id="spare-part-detail-title"></h1>
+            <p class="spare-part-detail-number" id="spare-part-detail-number"></p>
+            <p class="spare-part-detail-intro" id="spare-part-detail-intro"></p>
+            <h2>Part details</h2>
+            <dl class="spare-part-detail-specs">
+              <div><dt>Part number</dt><dd id="spare-part-detail-spec-number"></dd></div>
+              <div><dt>Pump model</dt><dd id="spare-part-detail-spec-model"></dd></div>
+              <div><dt>Description</dt><dd id="spare-part-detail-spec-description"></dd></div>
+              <div><dt>Catalogue category</dt><dd id="spare-part-detail-spec-category"></dd></div>
+              <div><dt>Image</dt><dd id="spare-part-detail-image-note"></dd></div>
+            </dl>
+            <p class="spare-part-detail-note" id="spare-part-detail-note">Compatibility, dimensions, price and availability must be confirmed for your equipment. Include the compressor make, model and serial number with your enquiry.</p>
+            <div class="spare-part-detail-actions">
+              <a class="button button-primary" id="spare-part-detail-enquiry" href="#contact" data-product-enquiry="">
+                Enquire about this part <span>↗</span>
+              </a>
+              <a class="spare-part-back" data-spare-part-home href="#spare-parts-section">Back to spare parts</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="hero" id="home" data-admin-section="home">
+      <div class="hero-images" aria-hidden="true">
+        <div class="hero-image is-active" data-hero-slide style="--hero-image: url('assets/home-background.webp')"></div>
+        <div class="hero-image" data-hero-slide style="--hero-image: url('assets/kaeser-card.webp')"></div>
+        <div class="hero-image" data-hero-slide style="--hero-image: url('assets/everest-vacuum.webp')"></div>
+        <div class="hero-image" data-hero-slide style="--hero-image: url('assets/shiftair-piping.webp')"></div>
+      </div>
+      <div class="hero-shade"></div>
+      <div class="container hero-content">
+        <h1 class="reveal"><span data-admin-field="page_hero_title_intro">Welcome to</span><br><span class="hero-brand-blue" data-admin-field="page_hero_title_brand">Aadya</span>
+          <span class="hero-brand-red" data-admin-field="page_hero_title_line_two">Engineering</span><br><span class="hero-brand-red" data-admin-field="page_hero_title_line_three">Equipment</span></h1>
+        <p class="hero-copy reveal" data-admin-field="heroCopy">Your partner for industrial air compressors, genuine spares, expert servicing and
+          dependable compressed-air solutions.</p>
+        <div class="hero-actions reveal"><a class="button button-primary" href="#contact"><span data-admin-field="page_hero_primary_cta">Discuss your requirement</span>
+            <span>↗</span></a><a class="button button-ghost" href="#services"><span class="play-icon">▶</span> Explore
+          <span data-admin-field="page_hero_secondary_cta">our services</span></a></div>
+        <div class="hero-foot reveal">
+          <div class="hero-foot-line"></div><span data-admin-field="page_hero_foot">SUPPORTING YOUR OPERATION, EVERY DAY</span>
+          <div class="hero-slide-controls" role="group" aria-label="Choose a featured solution image">
+            <button type="button" class="is-active" aria-label="Show industrial facility" aria-pressed="true"></button>
+            <button type="button" aria-label="Show KAESER compressor" aria-pressed="false"></button>
+            <button type="button" aria-label="Show EVEREST vacuum pump" aria-pressed="false"></button>
+            <button type="button" aria-label="Show SHIFTAIR piping" aria-pressed="false"></button>
+          </div>
+        </div>
+      </div>
+      <a class="hero-float reveal" href="#services" aria-label="Explore service and support solutions">
+        <span class="float-icon">✳</span>
+        <div><strong data-admin-field="page_hero_float_title">Uptime-focused</strong><small data-admin-field="page_hero_float_copy">Service & support solutions</small></div><span
+          class="float-arrow">↗</span>
+      </a>
+    </section>
+    <section class="trust-strip" data-admin-section="trust-strip">
+      <div class="container trust-inner">
+        <img class="trust-partners-image" src="assets/authorized.webp"
+          alt="Authorized channel partners: Kaeser, Hörmann, Everest, Godrej and ShiftAir" loading="lazy">
+      </div>
+    </section>
+    <section class="section about-section" id="about" data-admin-section="about">
+      <div class="container about-grid">
+        <div class="about-visual reveal" id="about-team"><button class="about-image-button" type="button"
+            aria-label="View larger team photo">
+            <img src="assets/team-photo.webp" alt="Aadya Engineering Equipment team" loading="lazy">
+          </button>
+          <div class="image-caption"><span data-admin-field="page_about_image_label">ENGINEERING WITH PURPOSE</span><b data-admin-field="page_about_image_caption">Performance you can plan around.</b></div>
+          <div class="round-stamp">INDUSTRIAL<br>EXPERTISE <span>✳</span></div>
+          <div class="about-team-note">
+            <span class="eyebrow"><span></span> OUR TEAM</span>
+            <p>Our team combines equipment knowledge with practical service support, helping customers with equipment selection, maintenance, parts identification and follow-up.</p>
+          </div>
+        </div>
+        <div class="about-copy reveal">
+          <div class="eyebrow"><span></span> <span data-admin-field="page_about_eyebrow">ABOUT AADYA</span></div>
+          <h2><span data-admin-field="page_about_title_line_one">Aadya Engineering</span> <span data-admin-field="page_about_title_line_two">Equipment</span> <em data-admin-field="page_about_title_line_three">Private Limited.</em></h2>
+          <p class="about-tagline" data-admin-field="aboutTagline">Reliable Industrial Solutions. Quality Service. Lasting Partnerships.</p>
+          <p class="lead" data-admin-field="aboutLead">A Visakhapatnam-based engineering equipment and industrial solutions company, committed to
+            reliable equipment, technical support and customer-focused solutions for diverse industries.</p>
+          <p data-admin-field="page_about_copy_two">We specialize in industrial compressed-air solutions, including Kaeser compressors, and vacuum solutions,
+            including Everest vacuum pumps. Our support spans equipment supply, installation and commissioning
+            coordination, preventive maintenance, troubleshooting, spare parts and after-sales service.</p>
+          <p data-admin-field="page_about_copy_three">Because equipment reliability and operational efficiency matter, we focus on suitable solutions, timely
+            service and dependable relationships that help our clients keep operations running smoothly.</p>
+        </div>
+      </div>
+      <div class="container about-details">
+        <div class="about-pillars">
+          <article class="about-pillar reveal">
+            <span class="about-card-number" data-admin-field="page_about_mission_label">01 / OUR MISSION</span>
+            <h3 data-admin-field="page_about_mission_title">Service that creates lasting value.</h3>
+            <p data-admin-field="page_about_mission_copy">To provide reliable industrial equipment and quality service solutions through technical expertise,
+              customer commitment and timely support, ensuring long-term value for our customers.</p>
+          </article>
+          <article class="about-pillar reveal">
+            <span class="about-card-number" data-admin-field="page_about_vision_label">02 / OUR VISION</span>
+            <h3 data-admin-field="page_about_vision_title">A partner industries can trust.</h3>
+            <p data-admin-field="page_about_vision_copy">To become a trusted industrial equipment and service solutions partner, recognized for reliability,
+              quality, professional service and lasting customer relationships.</p>
+          </article>
+        </div>
+        <div class="about-why">
+          <div class="eyebrow reveal"><span></span> <span data-admin-field="page_about_reasons_eyebrow">WHY CHOOSE US</span></div>
+          <h3 class="about-subheading reveal"><span data-admin-field="page_about_reasons_title_one">Practical expertise.</span><br><em data-admin-field="page_about_reasons_title_two">Personal support.</em></h3>
+          <div class="about-reasons">
+            <article class="about-reason reveal">
+              <span>01</span><h4 data-admin-field="page_about_reason_one_title">Quality equipment</h4>
+              <p data-admin-field="page_about_reason_one_copy">Industrial solutions selected to meet your requirements.</p>
+            </article>
+            <article class="about-reason reveal">
+              <span>02</span><h4 data-admin-field="page_about_reason_two_title">Technical support</h4>
+              <p data-admin-field="page_about_reason_two_copy">Help with equipment servicing, maintenance and troubleshooting.</p>
+            </article>
+            <article class="about-reason reveal">
+              <span>03</span><h4 data-admin-field="page_about_reason_three_title">Customer-focused</h4>
+              <p data-admin-field="page_about_reason_three_copy">Solutions tailored to your individual operational needs.</p>
+            </article>
+            <article class="about-reason reveal">
+              <span>04</span><h4 data-admin-field="page_about_reason_four_title">Reliable service</h4>
+              <p data-admin-field="page_about_reason_four_copy">Timely response with a focus on minimizing equipment downtime.</p>
+            </article>
+            <article class="about-reason reveal">
+              <span>05</span><h4 data-admin-field="page_about_reason_five_title">Long-term partnerships</h4>
+              <p data-admin-field="page_about_reason_five_copy">Professional support and transparent communication to build confidence.</p>
+            </article>
+          </div>
+        </div>
+        <div class="about-commitment reveal">
+          <span class="eyebrow light"><span></span> <span data-admin-field="page_about_commitment_label">OUR COMMITMENT</span></span>
+          <p data-admin-field="page_about_commitment_copy">Our responsibility goes beyond supplying equipment. We strive to support customers throughout the
+            equipment lifecycle with dependable service, practical solutions and a commitment to customer satisfaction.</p>
+        </div>
+      </div>
+    </section>
+    <section class="office-section" id="our-office" data-admin-section="our-office" aria-labelledby="office-title">
+      <div class="container office-card">
+        <div class="office-copy">
+          <div class="eyebrow"><span></span> VISIT OR CONTACT US</div>
+          <h2 id="office-title">Our Office</h2>
+          <p>Connect with Aadya Engineering Equipment in Visakhapatnam, Andhra Pradesh. Contact our team to confirm the office location and arrange a visit.</p>
+          <div class="office-location"><span aria-hidden="true">⌖</span><div><b>Visakhapatnam</b><small>Andhra Pradesh, India</small></div></div>
+          <div class="office-actions">
+            <a class="button button-primary" href="https://www.google.com/maps/search/?api=1&amp;query=Aadya%20Engineering%20Equipment%20Private%20Limited%20Visakhapatnam" target="_blank" rel="noopener noreferrer">Find us on Maps <span>↗</span></a>
+            <a class="office-contact-link" href="#contact">Contact our team</a>
+          </div>
+        </div>
+        <div class="office-visual" aria-hidden="true"><span>ANDHRA PRADESH</span><b>VISAKHAPATNAM</b><i>⌖</i></div>
+      </div>
+    </section>
+    <dialog class="image-dialog" id="team-photo-dialog" aria-label="Enlarged team photo">
+      <button class="image-dialog-close" type="button" aria-label="Close enlarged team photo">×</button>
+      <img src="assets/team-photo.webp" alt="Aadya Engineering Equipment team">
+    </dialog>
+    <section class="section services-section" id="services" data-admin-section="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="eyebrow"><span></span> <span data-admin-field="page_services_eyebrow">WHAT WE DO</span></div>
+            <h2><span data-admin-field="page_services_title_one">Complete support.</span><br><em data-admin-field="page_services_title_two">One trusted partner.</em></h2>
+          </div>
+          <p data-admin-field="page_services_intro">From choosing equipment to keeping it running, explore services designed for industrial performance.</p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card reveal" id="service-equipment">
+            <div class="service-top"><span class="service-number" data-admin-field="page_service_one_label">01 / EQUIPMENT</span><span class="card-arrow">↗</span>
+            </div>
+            <div class="service-icon"><svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M7 30h34v8H7zM11 30V17h20v13M31 22h6l4 8M15 17v-5h12v5M16 34h4m12 0h4" />
+              </svg></div>
+            <h3 data-admin-field="page_service_one_title">Air Compressor Sales</h3>
+            <p data-admin-field="page_service_one_copy">Industrial compressor options selected to suit your operating requirements and application.</p><a
+              href="?view=service&amp;service=equipment#service-detail-page"><span data-admin-field="page_service_one_link">Explore service details</span> <span>↗</span></a>
+          </article>
+          <article class="service-card reveal" id="service-parts">
+            <div class="service-top"><span class="service-number" data-admin-field="page_service_two_label">02 / PARTS</span><span class="card-arrow">↗</span>
+            </div>
+            <div class="service-icon"><svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M29 8a11 11 0 0 0-13 14L7 31a5 5 0 0 0 7 7l9-9A11 11 0 0 0 37 16l-7 7-7-7z" />
+              </svg></div>
+            <h3 data-admin-field="page_service_two_title">Spare Parts</h3>
+            <p data-admin-field="page_service_two_copy">Help sourcing quality replacement parts to support performance and equipment life.</p><a
+              href="?view=service&amp;service=parts#service-detail-page"><span data-admin-field="page_service_two_link">Explore service details</span> <span>↗</span></a>
+          </article>
+          <article class="service-card reveal" id="service-repairs">
+            <div class="service-top"><span class="service-number" data-admin-field="page_service_three_label">03 / MAINTENANCE</span><span
+                class="card-arrow">↗</span></div>
+            <div class="service-icon"><svg viewBox="0 0 48 48" aria-hidden="true">
+                <path d="M24 6 39 12v11c0 10-6 16-15 20C15 39 9 33 9 23V12zM17 24l5 5 10-11" />
+              </svg></div>
+            <h3 data-admin-field="page_service_three_title">Service & Repairs</h3>
+            <p data-admin-field="page_service_three_copy">Inspection, troubleshooting and maintenance support from experienced service professionals.</p><a
+              href="?view=service&amp;service=repairs#service-detail-page"><span data-admin-field="page_service_three_link">Explore service details</span> <span>↗</span></a>
+          </article>
+          <article class="service-card reveal" id="service-amc">
+            <div class="service-top"><span class="service-number" data-admin-field="page_service_four_label">04 / AMC</span><span class="card-arrow">↗</span></div>
+            <div class="service-icon"><svg viewBox="0 0 48 48" aria-hidden="true">
+                <circle cx="24" cy="24" r="17" />
+                <path d="M24 14v11l8 5M11 8l5 4M37 8l-5 4" />
+              </svg></div>
+            <h3 data-admin-field="page_service_four_title">AMC & Preventive Care</h3>
+            <p data-admin-field="page_service_four_copy">Planned maintenance support to help reduce unexpected stoppages and improve readiness.</p><a
+              href="?view=amc#amc-detail-page"><span data-admin-field="page_service_four_link">Explore AMC details</span> <span>↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section products-section" id="products" data-admin-section="products" hidden>
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="eyebrow"><span></span> OUR PRODUCTS</div>
+            <h2>Equipment for<br><em>every operation.</em></h2>
+          </div>
+          <p>Explore industrial equipment and system components supplied and supported by Aadya. Share your application and our team can help you identify a suitable option.</p>
+        </div>
+        <div class="product-filters reveal" role="group" aria-label="Filter products">
+          <button type="button" class="product-filter is-active" data-product-filter="all" aria-pressed="true">All products</button>
+          <button type="button" class="product-filter" data-product-filter="air" aria-pressed="false">Air compressors</button>
+          <button type="button" class="product-filter" data-product-filter="vacuum" aria-pressed="false">Vacuum pumps</button>
+          <button type="button" class="product-filter" data-product-filter="spares" aria-pressed="false">Parts & filters</button>
+          <button type="button" class="product-filter" data-product-filter="facility" aria-pressed="false">Doors & piping</button>
+        </div>
+        <p class="product-results" id="product-results" aria-live="polite">Showing 6 products</p>
+        <div class="product-grid">
+          <article class="product-card reveal" data-product-category="air" data-product-id="kaeser-compressors">
+            <button type="button" class="product-card-open" data-product-open="kaeser-compressors" aria-label="View complete details for rotary screw air compressors"></button>
+            <div class="product-image">
+              <img src="assets/kaeser-card.webp" alt="KAESER rotary screw air compressor in an industrial facility" loading="lazy">
+              <span class="product-badge">KAESER</span>
+            </div>
+            <div class="product-card-content">
+              <span class="product-category">INDUSTRIAL AIR</span>
+              <h3>Rotary Screw Air Compressors</h3>
+              <p>Explore KAESER compressor options for continuous industrial compressed-air requirements.</p>
+              <a class="product-enquiry" href="#contact" data-product-enquiry="KAESER rotary screw air compressors">Request product details <span>↗</span></a>
+            </div>
+          </article>
+          <article class="product-card reveal" data-product-category="air" data-product-id="air-system-packages">
+            <button type="button" class="product-card-open" data-product-open="air-system-packages" aria-label="View complete details for compressed air system packages"></button>
+            <div class="product-image">
+              <img src="assets/kaeser-air-compressors_46-124394.jpg" alt="KAESER compressed air system with compressor and air treatment equipment" loading="lazy">
+              <span class="product-badge">SYSTEM SOLUTIONS</span>
+            </div>
+            <div class="product-card-content">
+              <span class="product-category">AIR TREATMENT</span>
+              <h3>Compressed Air System Packages</h3>
+              <p>Compressor-room solutions with supporting air treatment and system equipment.</p>
+              <a class="product-enquiry" href="#contact" data-product-enquiry="KAESER compressed air system packages">Request product details <span>↗</span></a>
+            </div>
+          </article>
+          <article class="product-card reveal" data-product-category="vacuum" data-product-id="everest-vacuum">
+            <button type="button" class="product-card-open" data-product-open="everest-vacuum" aria-label="View complete details for EVEREST rotary vane vacuum pumps"></button>
+            <div class="product-image">
+              <img src="assets/everest-vacuum.webp" alt="EVEREST rotary vane vacuum pump" loading="lazy">
+              <span class="product-badge">EVEREST</span>
+            </div>
+            <div class="product-card-content">
+              <span class="product-category">INDUSTRIAL VACUUM</span>
+              <h3>Rotary Vane Vacuum Pumps</h3>
+              <p>EVEREST vacuum pump options for industrial processes requiring dependable vacuum.</p>
+              <a class="product-enquiry" href="#contact" data-product-enquiry="EVEREST industrial vacuum pumps">Request product details <span>↗</span></a>
+            </div>
+          </article>
+          <article class="product-card reveal" data-product-category="spares" data-product-id="compressor-parts">
+            <button type="button" class="product-card-open" data-product-open="compressor-parts" aria-label="View complete details for compressor parts and filters"></button>
+            <div class="product-image">
+              <img src="assets/godrej-compressed-air.webp" alt="Godrej compressor filters and replacement parts" loading="lazy">
+              <span class="product-badge">GODREJ</span>
+            </div>
+            <div class="product-card-content">
+              <span class="product-category">PARTS & FILTERS</span>
+              <h3>Compressor Parts & Filters</h3>
+              <p>Ask us about replacement filters and maintenance parts for your compressor equipment.</p>
+              <a class="product-enquiry" href="#contact" data-product-enquiry="Godrej compressor parts and filters">Request product details <span>↗</span></a>
+            </div>
+          </article>
+          <article class="product-card reveal" data-product-category="facility" data-product-id="industrial-doors">
+            <button type="button" class="product-card-open" data-product-open="industrial-doors" aria-label="View complete details for industrial doors and loading bays"></button>
+            <div class="product-image">
+              <img src="assets/harmann-doors.webp" alt="HÖRMANN industrial loading bay doors" loading="lazy">
+              <span class="product-badge">HÖRMANN</span>
+            </div>
+            <div class="product-card-content">
+              <span class="product-category">FACILITY EQUIPMENT</span>
+              <h3>Industrial Doors & Loading Bays</h3>
+              <p>Door and loading bay options for warehouses, manufacturing units and industrial facilities.</p>
+              <a class="product-enquiry" href="#contact" data-product-enquiry="HÖRMANN industrial doors and loading bay equipment">Request product details <span>↗</span></a>
+            </div>
+          </article>
+          <article class="product-card reveal" data-product-category="facility" data-product-id="compressed-air-piping">
+            <button type="button" class="product-card-open" data-product-open="compressed-air-piping" aria-label="View complete details for compressed air piping"></button>
+            <div class="product-image">
+              <img src="assets/shiftair-piping.webp" alt="SHIFTAIR compressed air distribution piping in an industrial facility" loading="lazy">
+              <span class="product-badge">SHIFTAIR</span>
+            </div>
+            <div class="product-card-content">
+              <span class="product-category">AIR DISTRIBUTION</span>
+              <h3>Compressed Air Piping</h3>
+              <p>Distribution piping solutions to bring compressed air from the plant room to points of use.</p>
+              <a class="product-enquiry" href="#contact" data-product-enquiry="SHIFTAIR compressed air piping systems">Request product details <span>↗</span></a>
+            </div>
+          </article>
+        </div>
+        <div class="products-footer reveal">
+          <p>Need help selecting equipment for your application?</p>
+          <a class="button button-primary" href="#contact">Talk to our team <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="section" id="spare-parts-section" data-admin-section="spare-parts-section" aria-labelledby="spare-parts-title" hidden>
+      <div class="container">
+        <nav class="spare-part-breadcrumbs" aria-label="Breadcrumb">
+          <a data-spare-part-home href="#products">Products</a>
+          <span aria-hidden="true">/</span>
+          <span id="spare-parts-brand-breadcrumb">KAESER spare parts</span>
+        </nav>
+        <div class="spare-parts-section">
+          <div class="spare-parts-heading">
+            <div>
+              <span class="product-category">GENUINE SERVICE PARTS</span>
+              <h1 id="spare-parts-title">KAESER spare parts catalogue</h1>
+              <p id="spare-parts-intro">Browse compressor service parts by image, part number and description. Search the catalogue or filter by part type.</p>
+            </div>
+            <label class="spare-parts-search">
+              <span>Search parts</span>
+              <input id="spare-parts-search" type="search" placeholder="Part number or description" autocomplete="off">
+            </label>
+          </div>
+          <div class="spare-parts-filters" role="group" aria-label="Filter spare parts">
+            <button type="button" class="spare-parts-filter is-active" data-spare-filter="all" aria-pressed="true">All parts</button>
+            <button type="button" class="spare-parts-filter" data-spare-filter="filters" aria-pressed="false">Filters</button>
+            <button type="button" class="spare-parts-filter" data-spare-filter="kits" aria-pressed="false">Maintenance kits</button>
+            <button type="button" class="spare-parts-filter" data-spare-filter="fluids" aria-pressed="false">Fluids & lubricants</button>
+            <button type="button" class="spare-parts-filter" data-spare-filter="components" aria-pressed="false">Other components</button>
+          </div>
+          <p class="spare-parts-results" id="spare-parts-results" aria-live="polite"></p>
+          <div class="spare-parts-grid" id="spare-parts-list"></div>
+          <p class="spare-parts-empty" id="spare-parts-empty" hidden>No parts match that search. Try another part number or description.</p>
+          <nav class="spare-parts-pagination" id="spare-parts-pagination" aria-label="Spare parts pages">
+            <button type="button" id="spare-parts-previous" aria-label="Previous page">← Previous</button>
+            <span id="spare-parts-page"></span>
+            <button type="button" id="spare-parts-next" aria-label="Next page">Next →</button>
+          </nav>
+          <p class="spare-parts-note" id="spare-parts-note">Select a part to view its catalogue details on this website. KAESER photos are representative category images, not confirmed photos of each individual part. Compatibility and availability vary by compressor model; include equipment make, model and serial number with your enquiry.</p>
+        </div>
+      </div>
+    </section>
+    <dialog class="product-detail-dialog" id="product-detail-dialog" aria-labelledby="product-detail-title">
+      <button class="product-detail-close" type="button" aria-label="Close product details">×</button>
+      <div class="product-detail-layout">
+        <div class="product-detail-visual">
+          <img id="product-detail-image" src="" alt="">
+          <span class="product-badge" id="product-detail-badge"></span>
+        </div>
+        <div class="product-detail-copy">
+          <span class="product-category" id="product-detail-category"></span>
+          <h2 id="product-detail-title"></h2>
+          <p class="product-detail-intro" id="product-detail-intro"></p>
+          <h3>Product details</h3>
+          <ul id="product-detail-features"></ul>
+          <p class="product-detail-note" id="product-detail-note"></p>
+          <a class="button button-primary product-detail-cta" id="product-detail-enquiry" href="#contact" data-product-enquiry="">
+            <span>Request details & a quote</span><span>↗</span>
+          </a>
+        </div>
+      </div>
+    </dialog>
+    <section class="section solutions-section" id="solutions" data-admin-section="solutions">
+      <div class="container">
+        <div class="section-heading solutions-heading reveal">
+          <div>
+            <div class="eyebrow"><span></span> <span data-admin-field="page_solutions_eyebrow">OUR SOLUTIONS</span></div>
+            <h2><span data-admin-field="page_solutions_title_one">Complete industrial solutions</span><br><em data-admin-field="page_solutions_title_two">under one roof.</em></h2>
+          </div>
+          <p data-admin-field="page_solutions_intro">At Aadya Engineering Equipment Private Limited, we support manufacturing plants, warehouses, commercial
+            facilities and industrial infrastructure projects with equipment, technical coordination and customer-focused
+            service.</p>
+        </div>
+        <p class="solutions-intro reveal" data-admin-field="page_solutions_detail_intro">From compressed air and vacuum systems to industrial doors and piping, we work
+          with you to find practical solutions that support operational efficiency, safety, productivity and long-term
+          performance.</p>
+        <div class="solution-filters reveal" role="group" aria-label="Filter solutions">
+          <button type="button" class="solution-filter is-active" data-solution-filter="all" aria-pressed="true">All solutions</button>
+          <button type="button" class="solution-filter" data-solution-filter="air" aria-pressed="false">Compressed air</button>
+          <button type="button" class="solution-filter" data-solution-filter="vacuum" aria-pressed="false">Vacuum</button>
+          <button type="button" class="solution-filter" data-solution-filter="facility" aria-pressed="false">Doors & facility</button>
+          <button type="button" class="solution-filter" data-solution-filter="support" aria-pressed="false">Service & projects</button>
+        </div>
+        <p class="solution-results" id="solution-results" aria-live="polite">Showing 7 solutions</p>
+        <div class="solution-cards">
+          <article class="solution-card reveal" data-solution-category="air">
+            <img src="assets/kaeser-card.webp"
+              alt="KAESER industrial compressor in an equipment room" loading="lazy">
+            <div class="solution-card-content">
+              <span class="solution-card-label" data-admin-field="page_solution_one_label">KAESER</span>
+              <h3 data-admin-field="page_solution_one_title">Industrial Air Compressor Solutions</h3>
+              <p data-admin-field="page_solution_one_copy">Industrial compressed air solutions featuring KAESER air compressors for a wide range of applications.</p>
+              <details class="solution-card-more">
+                <summary><span class="show-more-label" data-admin-field="page_solutions_more">Show more</span><span class="show-less-label" data-admin-field="page_solutions_less">Show less</span></summary>
+                <ul>
+                  <li data-admin-field="page_solution_one_detail_one">Compressor supply and equipment selection</li>
+                  <li data-admin-field="page_solution_one_detail_two">Preventive maintenance and servicing</li>
+                  <li data-admin-field="page_solution_one_detail_three">Troubleshooting and breakdown support</li>
+                  <li data-admin-field="page_solution_one_detail_four">Spare parts, inspections and technical assistance</li>
+                </ul>
+                <p class="solution-card-note" data-admin-field="page_solution_one_note">We help maintain reliable compressed air operations and minimize unnecessary downtime.</p>
+              </details>
+            </div>
+          </article>
+          <article class="solution-card reveal" data-solution-category="vacuum">
+            <img src="assets/everest-vacuum.webp"
+              alt="EVEREST industrial vacuum pump" loading="lazy">
+            <div class="solution-card-content">
+              <span class="solution-card-label" data-admin-field="page_solution_two_label">EVEREST</span>
+              <h3 data-admin-field="page_solution_two_title">Industrial Vacuum Pump Solutions</h3>
+              <p data-admin-field="page_solution_two_copy">EVEREST vacuum pump solutions for applications that require dependable vacuum performance.</p>
+              <details class="solution-card-more">
+                <summary><span class="show-more-label" data-admin-field="page_solutions_more">Show more</span><span class="show-less-label" data-admin-field="page_solutions_less">Show less</span></summary>
+                <ul>
+                  <li data-admin-field="page_solution_two_detail_one">Industrial vacuum pump supply</li>
+                  <li data-admin-field="page_solution_two_detail_two">Maintenance and servicing support</li>
+                  <li data-admin-field="page_solution_two_detail_three">Troubleshooting and technical assistance</li>
+                  <li data-admin-field="page_solution_two_detail_four">Spare parts and equipment condition assessment</li>
+                </ul>
+                <p class="solution-card-note" data-admin-field="page_solution_two_note">Support is tailored to help maintain system performance for your application.</p>
+              </details>
+            </div>
+          </article>
+          <article class="solution-card reveal" data-solution-category="facility">
+            <img src="assets/harmann-doors.webp" alt="HÖRMANN industrial loading bay doors" loading="lazy">
+            <div class="solution-card-content">
+              <span class="solution-card-label" data-admin-field="page_solution_three_label">HÖRMANN</span>
+              <h3 data-admin-field="page_solution_three_title">Industrial Doors & Loading Bays</h3>
+              <p data-admin-field="page_solution_three_copy">Hörmann solutions for industrial facilities, warehouses, manufacturing units and commercial buildings.</p>
+              <details class="solution-card-more">
+                <summary><span class="show-more-label" data-admin-field="page_solutions_more">Show more</span><span class="show-less-label" data-admin-field="page_solutions_less">Show less</span></summary>
+                <ul>
+                  <li data-admin-field="page_solution_three_detail_one">Sectional, fire-rated and high-speed doors</li>
+                  <li data-admin-field="page_solution_three_detail_two">Rolling shutters and dock levellers</li>
+                  <li data-admin-field="page_solution_three_detail_three">Loading bay equipment, accessories and hardware</li>
+                  <li data-admin-field="page_solution_three_detail_four">Product selection and installation coordination</li>
+                </ul>
+                <p class="solution-card-note" data-admin-field="page_solution_three_note">Solutions are coordinated around project specifications, access management and facility safety.</p>
+              </details>
+            </div>
+          </article>
+          <article class="solution-card reveal" data-solution-category="air">
+            <img src="assets/shiftair-piping.webp"
+              alt="Compressed air distribution pipes in an industrial facility" loading="lazy">
+            <div class="solution-card-content">
+              <span class="solution-card-label" data-admin-field="page_solution_four_label">SHIFTAIR</span>
+              <h3 data-admin-field="page_solution_four_title">Compressed Air Piping Solutions</h3>
+              <p data-admin-field="page_solution_four_copy">Shiftair piping solutions help distribute compressed air from the compressor room to points of use.</p>
+              <details class="solution-card-more">
+                <summary><span class="show-more-label" data-admin-field="page_solutions_more">Show more</span><span class="show-less-label" data-admin-field="page_solutions_less">Show less</span></summary>
+                <ul>
+                  <li data-admin-field="page_solution_four_detail_one">Pipeline supply, accessories and connections</li>
+                  <li data-admin-field="page_solution_four_detail_two">Layout and system planning coordination</li>
+                  <li data-admin-field="page_solution_four_detail_three">Pipeline installation coordination</li>
+                  <li data-admin-field="page_solution_four_detail_four">Distribution systems for production facilities</li>
+                </ul>
+                <p class="solution-card-note" data-admin-field="page_solution_four_note">We help plan organized, efficient air distribution to suit your operation.</p>
+              </details>
+            </div>
+          </article>
+          <article class="solution-card solution-card-brand reveal" data-solution-category="air">
+            <img src="assets/godrej-compressed-air.webp" alt="Godrej compressor parts and compressed air equipment" loading="lazy">
+            <div class="solution-card-content">
+              <span class="solution-card-label" data-admin-field="page_solution_five_label">GODREJ</span>
+              <h3 data-admin-field="page_solution_five_title">Godrej Compressed Air Solutions</h3>
+              <p data-admin-field="page_solution_five_copy">Godrej compressed air solutions for industrial and manufacturing applications, supporting reliable
+                equipment, consistent air supply and productive operations.</p>
+              <details class="solution-card-more">
+                <summary><span class="show-more-label" data-admin-field="page_solutions_more">Show more</span><span class="show-less-label" data-admin-field="page_solutions_less">Show less</span></summary>
+                <ul>
+                  <li data-admin-field="page_solution_five_detail_one">Industrial air compressors</li>
+                  <li data-admin-field="page_solution_five_detail_two">Compressed air system solutions</li>
+                  <li data-admin-field="page_solution_five_detail_three">Equipment supply and technical support</li>
+                  <li data-admin-field="page_solution_five_detail_four">Preventive maintenance and service support</li>
+                  <li data-admin-field="page_solution_five_detail_five">Spare parts assistance</li>
+                  <li data-admin-field="page_solution_five_detail_six">Troubleshooting and equipment inspection</li>
+                </ul>
+                <p class="solution-card-note" data-admin-field="page_solution_five_note">We help identify suitable compressed air solutions based on your operational
+                  requirements, equipment specifications and application needs.</p>
+              </details>
+            </div>
+          </article>
+          <article class="solution-card reveal" data-solution-category="support">
+            <img src="assets/service-technician.webp" alt="Technician servicing industrial compressor equipment" loading="lazy">
+            <div class="solution-card-content">
+              <span class="solution-card-label" data-admin-field="page_solution_six_label">SERVICE & CARE</span>
+              <h3 data-admin-field="page_solution_six_title">Preventive Maintenance & Technical Service</h3>
+              <p data-admin-field="page_solution_six_copy">Regular maintenance and responsive technical support help keep equipment reliable and operations running smoothly.</p>
+              <details class="solution-card-more">
+                <summary><span class="show-more-label" data-admin-field="page_solutions_more">Show more</span><span class="show-less-label" data-admin-field="page_solutions_less">Show less</span></summary>
+                <ul>
+                  <li data-admin-field="page_solution_six_detail_one">Preventive maintenance and equipment inspection</li>
+                  <li data-admin-field="page_solution_six_detail_two">Troubleshooting and fault identification</li>
+                  <li data-admin-field="page_solution_six_detail_three">Breakdown service coordination</li>
+                  <li data-admin-field="page_solution_six_detail_four">Spare parts assistance and maintenance planning</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+          <article class="solution-card reveal" data-solution-category="support">
+            <img src="assets/team-photo.webp" alt="Aadya Engineering Equipment team" loading="lazy">
+            <div class="solution-card-content">
+              <span class="solution-card-label" data-admin-field="page_solution_seven_label">PROJECT SUPPORT</span>
+              <h3 data-admin-field="page_solution_seven_title">Industrial Equipment & Project Support</h3>
+              <p data-admin-field="page_solution_seven_copy">We help identify suitable equipment and engineering solutions based on project requirements, applications,
+                specifications and operating conditions.</p>
+              <details class="solution-card-more">
+                <summary><span class="show-more-label" data-admin-field="page_solutions_more">Show more</span><span class="show-less-label" data-admin-field="page_solutions_less">Show less</span></summary>
+                <ul>
+                  <li data-admin-field="page_solution_seven_detail_one">Product selection and technical coordination</li>
+                  <li data-admin-field="page_solution_seven_detail_two">Commercial coordination and equipment delivery</li>
+                  <li data-admin-field="page_solution_seven_detail_three">Installation coordination and project support</li>
+                  <li data-admin-field="page_solution_seven_detail_four">Professional assistance throughout the project</li>
+                </ul>
+              </details>
+            </div>
+          </article>
+        </div>
+        <div class="solutions-why">
+          <div class="eyebrow light"><span></span> <span data-admin-field="page_solutions_why_label">WHY AADYA</span></div>
+          <h3 data-admin-field="page_solutions_why_title">Multiple solutions. One dependable partner.</h3>
+          <div class="solutions-benefits">
+            <p><b data-admin-field="page_benefit_one_title">Multiple industrial solutions</b><span data-admin-field="page_benefit_one_copy">Air compressors, vacuum pumps, industrial doors and compressed air piping.</span></p>
+            <p><b data-admin-field="page_benefit_two_title">Trusted product brands</b><span data-admin-field="page_benefit_two_copy">Solutions featuring KAESER, EVEREST, HÖRMANN, SHIFTAIR and Godrej.</span></p>
+            <p><b data-admin-field="page_benefit_three_title">Technical coordination</b><span data-admin-field="page_benefit_three_copy">Support with equipment selection, specifications and project requirements.</span></p>
+            <p><b data-admin-field="page_benefit_four_title">Service & maintenance</b><span data-admin-field="page_benefit_four_copy">Assistance with maintenance, troubleshooting and spare parts.</span></p>
+            <p><b data-admin-field="page_benefit_five_title">Customer-focused approach</b><span data-admin-field="page_benefit_five_copy">Solutions tailored to customer applications and project needs.</span></p>
+            <p><b data-admin-field="page_benefit_six_title">Long-term partnerships</b><span data-admin-field="page_benefit_six_copy">Dependable support and lasting business relationships.</span></p>
+          </div>
+          <div class="solutions-commitment">
+            <span class="solution-card-label" data-admin-field="page_solutions_commitment_label">OUR COMMITMENT</span>
+            <p data-admin-field="page_solutions_commitment_copy">At Aadya Engineering Equipment Private Limited, we believe every industrial requirement deserves a reliable
+              and practical solution. We combine equipment supply, engineering coordination and technical service support
+              to help customers achieve efficient operations and long-term value.</p>
+            <strong data-admin-field="page_solutions_commitment_title">Aadya Engineering Equipment Private Limited — Your Trusted Partner for Industrial Equipment, Door
+              Systems & Engineering Solutions.</strong>
+          </div>
+          <p class="solutions-contact-prompt" data-admin-field="page_solutions_prompt">Contact us today to discuss your industrial equipment and project requirements.</p>
+          <a class="button button-primary" href="#contact"><span data-admin-field="page_solutions_cta">Discuss your requirements</span> <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="section process-section" id="process" data-admin-section="process">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="eyebrow"><span></span> <span data-admin-field="page_process_eyebrow">HOW WE WORK</span></div>
+            <h2><span data-admin-field="page_process_title_one">A clear path to</span><br><em data-admin-field="page_process_title_two">better uptime.</em></h2>
+          </div>
+          <p data-admin-field="page_process_intro">Responsive communication and a practical approach at every step.</p>
+        </div>
+        <div class="process-grid">
+          <div class="process-step reveal"><span data-admin-field="page_process_one_number">01</span>
+            <div class="process-line"></div>
+            <h3 data-admin-field="page_process_one_title">Understand</h3>
+            <p data-admin-field="page_process_one_copy">We learn about your equipment, application and operational needs.</p>
+          </div>
+          <div class="process-step reveal"><span data-admin-field="page_process_two_number">02</span>
+            <div class="process-line"></div>
+            <h3 data-admin-field="page_process_two_title">Recommend</h3>
+            <p data-admin-field="page_process_two_copy">We discuss suitable products, parts or service options with you.</p>
+          </div>
+          <div class="process-step reveal"><span data-admin-field="page_process_three_number">03</span>
+            <div class="process-line"></div>
+            <h3 data-admin-field="page_process_three_title">Support</h3>
+            <p data-admin-field="page_process_three_copy">We coordinate the next steps and keep communication clear.</p>
+          </div>
+          <div class="process-step reveal"><span data-admin-field="page_process_four_number">04</span>
+            <div class="process-line"></div>
+            <h3 data-admin-field="page_process_four_title">Maintain</h3>
+            <p data-admin-field="page_process_four_copy">We help you consider ongoing maintenance and future requirements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contact-section" id="contact" data-admin-section="contact">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal">
+          <div class="eyebrow light"><span></span> <span data-admin-field="page_contact_eyebrow">LET'S TALK</span></div>
+          <h2><span data-admin-field="page_contact_title_one">Have a project</span><br><span data-admin-field="page_contact_title_two">in</span> <em data-admin-field="page_contact_title_three">mind?</em></h2>
+          <p data-admin-field="page_contact_intro">Tell us what your operation needs. Our team will get in touch to discuss the right next step.</p>
+          <div class="contact-detail"><span>✉</span>
+            <div><small>EMAIL</small><a href="mailto:info@yourcompany.com" data-admin-contact="email">info@yourcompany.com</a></div>
+          </div>
+          <div class="contact-detail"><span>☎</span>
+            <div><small>PHONE</small><a href="tel:+910000000000" data-admin-contact="phone">+91 XXXXX XXXXX</a></div>
+          </div>
+          <p class="contact-note" data-admin-field="page_contact_note">Replace the sample contact details with your official company information before
+            publishing.</p>
+        </div>
+        <form class="contact-form reveal" id="enquiry-form">
+          <div class="form-honey" aria-hidden="true"><label>Leave this field empty<input name="website" tabindex="-1" autocomplete="off"></label></div>
+          <div class="form-heading"><span data-admin-field="page_contact_form_label">START A CONVERSATION</span><b><span data-admin-field="page_contact_form_title">Request an enquiry</span> <i>↗</i></b></div>
+              <div class="form-row"><label><span data-admin-field="page_contact_name_label">Your name</span><input name="name" type="text" placeholder="Full name"
+                required></label><label><span data-admin-field="page_contact_company_label">Company</span><input name="company" type="text" placeholder="Company name"></label>
+          </div>
+              <div class="form-row"><label><span data-admin-field="page_contact_email_label">Email address</span><input name="email" type="email" placeholder="you@company.com"
+                required></label><label><span data-admin-field="page_contact_phone_label">Phone number</span><input name="phone" type="tel"
+                placeholder="Your phone number"></label></div><label><span data-admin-field="page_contact_service_label">I'm interested in</span><select name="service" required>
+              <option value="" data-admin-field="page_contact_option_placeholder">Choose a service</option>
+              <option data-admin-field="page_contact_option_compressor">Compressor sales</option>
+              <option data-admin-field="page_contact_option_parts">Spare parts</option>
+              <option data-admin-field="page_contact_option_service">Service & repairs</option>
+              <option data-admin-field="page_contact_option_amc">AMC / preventive maintenance</option>
+              <option data-admin-field="page_contact_option_other">Other enquiry</option>
+            </select></label><label><span data-admin-field="page_contact_message_label">Tell us about your requirement</span><textarea name="message" rows="3"
+              placeholder="A few details about your requirement..."></textarea></label><button
+            class="button button-primary form-submit" type="submit"><span data-admin-field="page_contact_submit">Prepare enquiry</span> <span>↗</span></button>
+          <p class="form-status" id="form-status" role="status" data-admin-field="page_contact_form_status">Enquiry form connected to the website enquiry service.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container footer-top"><div class="footer-brand-block"><a class="brand brand-footer" href="#top"><img class="brand-logo"
+          src="assets/aadya-logo.webp" alt=""><span
+          class="brand-name"><span data-admin-field="page_brand_name">AADYA</span> <small data-admin-field="page_brand_descriptor">ENGINEERING EQUIPMENT</small></span></a>
+        <p class="footer-brand-copy" data-admin-field="heroCopy">Your partner for industrial air compressors, genuine spares, expert servicing and dependable compressed-air solutions.</p>
+      </div>
+      <nav class="footer-quick-links" aria-label="Quick links">
+        <h2>Quick links</h2>
+        <div>
+          <a href="#home">Home</a>
+          <a href="?view=clients#clients-page">Clients</a>
+          <a href="inventory.html">Stock Login</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#solutions">Solutions</a>
+          <a href="#process">Our process</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+      <a class="back-top" href="#top" data-admin-field="page_footer_back_top">Back to top ↑</a>
+    </div>
+    <div class="container footer-bottom"><span>© <span id="year"></span> Aadya Engineering Equipment Private
+        Limited.</span></div>
+  </footer>
+  <div class="footer-contact-shortcut">
+  <nav class="contact-shortcut-menu" id="contact-shortcut-menu" aria-label="Contact and social links" hidden>
+    <a class="contact-shortcut-whatsapp" href="https://wa.me/917981923481" target="_blank" rel="noopener noreferrer"
+      aria-label="WhatsApp" title="WhatsApp">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+        <path d="M20.2 11.8a8.2 8.2 0 0 1-12.1 7.1L3 20l1.2-4.9a8.2 8.2 0 1 1 16-3.3Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="9" cy="12" r="1" fill="currentColor"/>
+        <circle cx="12" cy="12" r="1" fill="currentColor"/>
+        <circle cx="15" cy="12" r="1" fill="currentColor"/>
+      </svg>
+    </a>
+    <a class="contact-shortcut-phone" href="tel:+917981923481" data-admin-contact="phone"
+      aria-label="Phone" title="Phone">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+        <path d="M7.1 3.8 4.8 5c-.9.5-1.3 1.5-1 2.5 1.8 6.1 6.6 10.9 12.7 12.7 1 .3 2-.1 2.5-1l1.2-2.3-4.4-2.2-1.6 2c-2.8-1.3-5-3.5-6.3-6.3l2-1.6-2.2-4.4Z" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <a class="contact-shortcut-linkedin" href="https://www.linkedin.com/search/results/companies/?keywords=Aadya%20Engineering%20Equipment%20Private%20Limited"
+      target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M5.2 8.4a1.8 1.8 0 1 0 0-3.6 1.8 1.8 0 0 0 0 3.6ZM3.7 9.8h3v10h-3v-10Zm4.9 0h2.9v1.4h.1c.4-.8 1.4-1.7 2.9-1.7 3.1 0 3.7 2 3.7 4.6v5.7h-3v-5.1c0-1.2 0-2.7-1.7-2.7s-2 1.3-2 2.6v5.2h-3v-10Z"/>
+      </svg>
+    </a>
+    <a class="contact-shortcut-instagram" href="https://www.instagram.com/explore/search/keyword/?q=Aadya%20Engineering%20Equipment"
+      target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+        <rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.8"/>
+        <circle cx="17.6" cy="6.8" r="1.1" fill="currentColor"/>
+      </svg>
+    </a>
+    <a class="contact-shortcut-email" href="mailto:info@yourcompany.com" data-admin-contact="email"
+      aria-label="Email" title="Email">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+        <rect x="3" y="5" width="18" height="14" rx="2.5" stroke="currentColor" stroke-width="1.8"/>
+        <path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </a>
+    <a class="contact-shortcut-location" href="https://www.google.com/maps/search/?api=1&amp;query=Aadya%20Engineering%20Equipment%20Private%20Limited%20Visakhapatnam"
+      target="_blank" rel="noopener noreferrer" aria-label="Location" title="Location">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+        <path d="M19 10.2c0 5-7 10.3-7 10.3S5 15.2 5 10.2a7 7 0 1 1 14 0Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <circle cx="12" cy="10" r="2.3" stroke="currentColor" stroke-width="1.8"/>
+      </svg>
+    </a>
+  </nav>
+    <button class="contact-shortcut-toggle" type="button" aria-label="Open contact links"
+      aria-expanded="false" aria-controls="contact-shortcut-menu">
+      <svg aria-hidden="true" viewBox="0 0 24 24" fill="none">
+        <path d="M20 11.5a7.5 7.5 0 0 1-7.5 7.5H5l1.5-3A7.5 7.5 0 1 1 20 11.5Z"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M8.5 11.5h7M12 8v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+      </svg>
+    </button>
+  </div>
+</body>
+
+</html>

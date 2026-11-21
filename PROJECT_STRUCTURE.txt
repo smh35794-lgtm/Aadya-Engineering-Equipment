@@ -1,0 +1,14 @@
+aadya-industrial-admin-optimized/
+├── index.html
+├── styles.css
+├── script.js
+├── website-admin.js
+├── admin/
+│   ├── index.html
+│   ├── admin.css
+│   └── admin.js
+├── assets/
+│   ├── original source images (kept for backup)
+│   └── optimized WebP image variants used by the website
+├── README.txt
+└── OPTIMIZATION_GUIDE.md
